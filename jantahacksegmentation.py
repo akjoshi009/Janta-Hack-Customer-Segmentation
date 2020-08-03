@@ -10,8 +10,6 @@ from sklearn.metrics import accuracy_score
 import matplotlib.pyplot as plt
 from sklearn import preprocessing
 from sklearn.metrics import confusion_matrix
-from sklearn.ensemble import RandomForestClassifier
-from xgboost import XGBClassifier
 from sklearn.preprocessing import StandardScaler
 from lightgbm import LGBMClassifier
 
@@ -88,31 +86,15 @@ test["Age"]=np.log(test["Age"])
 
 #train["Family_Size"]=np.where(train["Family_Size"]>4.0,5.0,train["Family_Size"])
 #test["Family_Size"]=np.where(test["Family_Size"]>4.0,5.0,test["Family_Size"])
-
-
-
-
 test = pd.merge(test, train[['ID', 'Segmentation']], on='ID', how='left')
-
-
-
-
 #test.isnull().sum()
-
-
 train=pd.get_dummies(train,prefix_sep="_",columns=['Profession'])
 test=pd.get_dummies(test,prefix_sep="_",columns=['Profession'])
 
 train.columns
 
 testx=test[test["Segmentation"].isnull()]
-
-
 scaler = StandardScaler()
-
-
-
-
 colx=['ID','Gender', 'Ever_Married', 'Age', 'Graduated', 'Work_Experience',
        'Spending_Score', 'Family_Size', 'Var_1', 'realexpe',
        'Profession_Artist', 'Profession_Doctor', 'Profession_Engineer',
