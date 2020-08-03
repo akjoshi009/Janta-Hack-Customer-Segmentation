@@ -26,3 +26,7 @@ sample_submission.csv
 ID: Unique ID
 
 Segmentation: Predicted segment for customers in the test set
+
+
+For more info 
+https://datahack.analyticsvidhya.com/contest/janatahack-customer-segmentation
