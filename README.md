@@ -28,5 +28,5 @@ ID: Unique ID
 Segmentation: Predicted segment for customers in the test set
 
 
-For more info 
+For DataSets and more info use official url
 https://datahack.analyticsvidhya.com/contest/janatahack-customer-segmentation
